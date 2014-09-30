@@ -7,7 +7,13 @@ But occaisionally a big name school plays a smaller school on the road [for vari
 
 I wanted to know if and when these games happen each week, so I made a Python script to determine when a college football team from a Power 5 conference (ACC, Big Ten, Big 12, Pac-12, or SEC) plays a non-power 5 school on the road.
 
-This requires Python 2.7, and the SQLAlchemy (for database creation) and Beautiful Soup (for web scraping) modules.  Both are available as default pacakges in Anaconda.  
+Requirements: 
+
++ Python 2.7
++ SQLAlchemy 0.9.4+
++ Beautiful Soup 4.3+
+
+Both SQLAlchemy (for database creation) and Beautiful Soup (for web scraping) are available as pre-installed modules in [Anaconda](https://store.continuum.io/cshop/anaconda/).  
 
 Running this is a three-step process.  First, create an empty database:
 
@@ -21,7 +27,9 @@ Next, populate that database with all FBS schools and their conference:
 populate_db.py
 ```
 
-Finally, use that database and a schedule to determine which Power 5 teams are playing road games vs. a non-Power 5 opponent each week:
+Finally, use that database and a schedule to determine which Power 5 teams are playing road games vs. a non-Power 5 opponent each week.  
+
+Below is the full output. Feel free to play with the calc_matchups.py file to determine other interesting weekly matchups.
 
 ```python
 python calc_matchups.py
@@ -48,6 +56,42 @@ Michigan at Notre Dame
 Texas Tech at UTEP
  
 Week 3:
+Baylor at Buffalo
+Pittsburgh at FIU
+Indiana at Bowling Green
+Mississippi State at South Alabama
+Wake Forest at Utah State
+Purdue at Notre Dame
+Nebraska at Fresno State
+ 
+Week 4:
+Rutgers at Navy
+Louisville at FIU
+Texas A&M at SMU
+North Carolina at East Carolina
+Virginia at BYU
+ 
+Week 5:
+TCU at SMU
+ 
+Week 6:
+Stanford at Notre Dame
+ 
+Week 7:
+North Carolina at Notre Dame
+ 
+Week 8:
+ 
+Week 9:
+ 
+Week 10:
+ 
+Week 11:
+ 
+Week 12:
+Northwestern at Notre Dame
+ 
+Week 13:
+Louisville at Notre Dame
 ```
 
-Etc.  Feel free to play with the calc_matchups.py file to determine other interesting weekly matchups.
