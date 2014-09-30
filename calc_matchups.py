@@ -2,7 +2,7 @@
 """
 Prints out the Power 5 vs. Non-Power 5 road matchups
 
-@author: scott
+First run create_database.py, then populate_db.py
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -26,7 +26,7 @@ for week in range(14):
     print " "
     print "Week %d:" % (week+1)
     
-    url="http://www.cbssports.com/collegefootball/schedules/FBS/week" + str(week+1)
+    url = base_url + str(week+1)
     
     page=urllib2.urlopen(url)
     soup = BeautifulSoup(page.read())

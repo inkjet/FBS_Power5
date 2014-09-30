@@ -21,21 +21,21 @@ Running this is a three-step process.  First, create an empty database:
 python create_database.py
 ```
 
-Next, populate that database with all FBS schools and their conference:
+Next, populate that database with all FBS schools and their conference.  This scrapes the [Wikipedia table](http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs) that lists all FBS schools.
 
 ```python
 populate_db.py
 ```
 
-Finally, use that database and a schedule to determine which Power 5 teams are playing road games vs. a non-Power 5 opponent each week.  
-
-Below is the full output. Feel free to play with the calc_matchups.py file to determine other interesting weekly matchups.
+Finally, use that database and a schedule to determine which Power 5 teams are playing road games vs. a non-Power 5 opponent each week.  I found the weekly schedule on the [CBS Sports website](http://www.cbssports.com/collegefootball/schedules/FBS/week1) was the easiest to scrape.
 
 ```python
 python calc_matchups.py
 ```
 
-The output for the 2014 season looks like this:
+Below is the full output. Feel free to play with the calc_matchups.py file to determine other interesting weekly matchups.
+
+The full output for the 2014 season looks like this:
 
 ```
 Week 1:

@@ -5,7 +5,7 @@ Script to populate the database of "Big 5" and "Other FBS" schools
 Uses example of scraping a Wikipedia table as documented here:
 http://adesquared.wordpress.com/2013/06/16/using-python-beautifulsoup-to-scrape-a-wikipedia-table/
 
-@author: scott
+First run create_db.py
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
