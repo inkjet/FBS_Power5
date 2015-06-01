@@ -9,89 +9,48 @@ I wanted to know if and when these games happen each week, so I made a Python sc
 
 Requirements: 
 
-+ Python 2.7
++ Python 2.7 or 3+
 + SQLAlchemy 0.9.4+
 + Beautiful Soup 4.3+
 
-Both SQLAlchemy (for database creation) and Beautiful Soup (for web scraping) are available as pre-installed modules in [Anaconda](https://store.continuum.io/cshop/anaconda/).  
+Note: both SQLAlchemy (for database creation) and Beautiful Soup (for web scraping) are available as pre-installed modules in [Anaconda](https://store.continuum.io/cshop/anaconda/).  
 
-Running this is a three-step process.  First, create an empty database:
-
-```python
-python create_database.py
-```
-
-Next, populate that database with all FBS schools and their conference.  This scrapes the [Wikipedia table](http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs) that lists all FBS schools.
+To run:
 
 ```python
-populate_db.py
+print_results.py
 ```
 
-Finally, use that database and a schedule to determine which Power 5 teams are playing road games vs. a non-Power 5 opponent each week.  I found the weekly schedule on the [CBS Sports website](http://www.cbssports.com/collegefootball/schedules/FBS/week1) was the easiest to scrape.
+This first creates a blank MySQL database. Next, that database is populated with all FBS schools and their conference.  This scrapes the [Wikipedia table](http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs) that lists all FBS schools.
 
-```python
-python calc_matchups.py
-```
+Finally, we use that database and a an online college football schedule to determine which Power 5 teams are playing road games vs. a non-Power 5 opponent each week.  I found the weekly schedule on the [CBS Sports website](http://www.cbssports.com/collegefootball/schedules/FBS/week1) was the easiest to scrape.
 
-Below is the full output. Feel free to play with the calc_matchups.py file to determine other interesting weekly matchups.
-
-The full output for the 2014 season looks like this:
+Output for the 2015 season looks like this:
 
 ```
+School database created
+
+Air Force is not a Power 5 school, they're in the Mountain West
+Akron is not a Power 5 school, they're in the MAC
+Alabama is a Power 5 school in the SEC
+<etc...>
+
 Week 1:
-Penn State at UCF
-Ohio State at Navy
-Boston College at Massachusetts
+Duke at Tulane
+Baylor at SMU
+Washington at Boise State
+Mississippi State at Southern Miss
+Penn State at Temple
+Texas at Notre Dame
+Purdue at Marshall
  
 Week 2:
-Washington State at Nevada
-Missouri at Toledo
-Oklahoma at Tulsa
-Colorado at Massachusetts
-Maryland at South Florida
-Georgia Tech at Tulane
-Duke at Troy
-Arizona State at New Mexico
-Michigan at Notre Dame
-Texas Tech at UTEP
- 
-Week 3:
-Baylor at Buffalo
-Pittsburgh at FIU
-Indiana at Bowling Green
-Mississippi State at South Alabama
-Wake Forest at Utah State
-Purdue at Notre Dame
-Nebraska at Fresno State
- 
-Week 4:
-Rutgers at Navy
-Louisville at FIU
-Texas A&M at SMU
-North Carolina at East Carolina
-Virginia at BYU
- 
-Week 5:
-TCU at SMU
- 
-Week 6:
-Stanford at Notre Dame
- 
-Week 7:
-North Carolina at Notre Dame
- 
-Week 8:
- 
-Week 9:
- 
-Week 10:
- 
-Week 11:
- 
-Week 12:
-Northwestern at Notre Dame
- 
-Week 13:
-Louisville at Notre Dame
+Pittsburgh at Akron
+Missouri at Arkansas State
+Minnesota at Colorado State
+Arizona at Nevada
+UCLA at UNLV
+
+<etc...>
 ```
 
