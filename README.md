@@ -1,8 +1,8 @@
 FBS_Power5
 ==========
-In college football, the "Power 5" conference schools (ACC, Big Ten, Big 12, Pac-12, or SEC) almost always host smaller schools during the season.  The smaller school walks away with a paycheck of up to $1 million for agreeing to the game, and the big school gets a win (usually).  
+In college football scheduling, the "Power 5" conference schools (ACC, Big Ten, Big 12, Pac-12, or SEC) almost always host schools from the smaller conferences (C-USA, MAC, etc).  The smaller school walks away with a paycheck of up to $1 million and the big school gets a win (usually).  
 
-But occaisionally a Power 5 school plays a smaller school on the road [for various reasons](http://espn.go.com/blog/acc/post/_/id/74265/acc-hits-the-road-vs-group-of-5). I wanted to know if and when these games happen each week, so I made a Python script to find out.
+But occasionally a Power 5 school plays a small school on the road [for various reasons](http://espn.go.com/blog/acc/post/_/id/74265/acc-hits-the-road-vs-group-of-5), which is pretty cool. I wanted to know if and when these games happen, so I made a Python script to find out.
 
 Requirements: 
 
@@ -47,7 +47,42 @@ Missouri at Arkansas State
 Minnesota at Colorado State
 Arizona at Nevada
 UCLA at UNLV
+ 
+Week 3:
+Iowa State at Toledo
+NC State at Old Dominion
+Georgia Tech at Notre Dame
+Colorado at Colorado State
+Utah at Fresno State
+ 
+Week 4:
+Virginia Tech at East Carolina
+NC State at South Alabama
+ 
+Week 5:
+ 
+Week 6:
+Syracuse at South Florida
+ 
+Week 7:
+Ole Miss at Memphis
+USC at Notre Dame
+ 
+Week 8:
+ 
+Week 9:
+Vanderbilt at Houston
+ 
+Week 10:
+ 
+Week 11:
+Wake Forest at Notre Dame
+ 
+Week 12:
+ 
+Week 13:
+ 
+Week 14:
 
-<etc...>
 ```
 
