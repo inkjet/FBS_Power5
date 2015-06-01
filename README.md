@@ -1,11 +1,10 @@
 FBS_Power5
 ==========
-
-In the world of college football, the big-money schools will pay smaller schools to come play at their stadium.  The smaller school walks away with a paycheck of up to $1 million for agreeing to the game, and the big school gets a win (usually).  
+In college football, the big "Power 5" conference schools (ACC, Big Ten, Big 12, Pac-12, or SEC) almost always host smaller schools during the season.  The smaller school walks away with a paycheck of up to $1 million for agreeing to the game, and the big school gets a win (usually).  
 
 But occaisionally a big name school plays a smaller school on the road [for various reasons](http://espn.go.com/blog/acc/post/_/id/74265/acc-hits-the-road-vs-group-of-5), and I love watching those games.  It's a huge game for the smaller school, and the bigger Power 5 school just wants to escape with a win.  
 
-I wanted to know if and when these games happen each week, so I made a Python script to determine when a college football team from a Power 5 conference (ACC, Big Ten, Big 12, Pac-12, or SEC) plays a non-power 5 school on the road.
+I wanted to know if and when these games happen each week, so I made a Python script to find out.
 
 Requirements: 
 
@@ -17,8 +16,8 @@ Note: both SQLAlchemy (for database creation) and Beautiful Soup (for web scrapi
 
 To run:
 
-```python
-print_results.py
+```
+python print_results.py
 ```
 
 This first creates a blank MySQL database. Next, that database is populated with all FBS schools and their conference.  This scrapes the [Wikipedia table](http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs) that lists all FBS schools.
