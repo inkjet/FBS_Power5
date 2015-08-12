@@ -10,7 +10,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from bs4 import BeautifulSoup
-import urllib2
  
 from create_database import School
 
@@ -26,8 +25,17 @@ def populate_db(db_location):
      
      # now scrape the school names from Wikipedia
     url="http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs"
-    page=urllib2.urlopen(url)
-    soup = BeautifulSoup(page.read())
+
+    try:
+        # Python 3.x method	
+        from urllib.request import urlopen
+        page=urlopen(url)
+    except:
+        # Python 2.x method
+        import urllib2
+        page=urllib2.urlopen(url) 
+
+    soup = BeautifulSoup(page.read(), "html.parser")
     
     table = soup.find("table", { "class" : "wikitable sortable" })
     

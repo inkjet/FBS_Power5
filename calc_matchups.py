@@ -8,7 +8,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from bs4 import BeautifulSoup
-import urllib2
  
 from create_database import School
 
@@ -22,6 +21,11 @@ def calc_matchups(db_location):
     
      # scrape the schedule from CBS since their site the easiest
     base_url="http://www.cbssports.com/collegefootball/schedules/FBS/week"
+
+    print(" ")
+    print("----------")
+    print(" ")
+    print("Power 5 college football teams playing non-Power 5 teams on the road in 2015")
     
     for week in range(14):
         
@@ -30,8 +34,16 @@ def calc_matchups(db_location):
         
         url = base_url + str(week+1)
         
-        page=urllib2.urlopen(url)
-        soup = BeautifulSoup(page.read())
+        try:
+            # Python 3.x method	
+            from urllib.request import urlopen
+            page=urlopen(url)
+        except:
+            # Python 2.x method
+            import urllib2
+            page=urllib2.urlopen(url)   	    
+	
+        soup = BeautifulSoup(page.read(), "html.parser")
         
         table = soup.find_all("table", { "class" : "data" })
          
