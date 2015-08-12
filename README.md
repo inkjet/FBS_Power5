@@ -11,7 +11,7 @@ Requirements:
 + SQLAlchemy 0.9.4+
 + Beautiful Soup 4.3+
 
-Note: both SQLAlchemy (for database creation) and Beautiful Soup (for web scraping) are available as pre-installed modules in [Anaconda](https://store.continuum.io/cshop/anaconda/).  
+Note: both SQLAlchemy (for database creation) and Beautiful Soup (for web scraping) can be installed by `pip install sqlalchemy beautifulsoup4` or are available as pre-installed modules in [Anaconda](https://store.continuum.io/cshop/anaconda/).  
 
 To run:
 
@@ -26,12 +26,14 @@ Finally, we use that database with an online college football schedule to determ
 Output for the 2015 season looks like this:
 
 ```
-School database created
+School database created at /home/user/FBS_Power5/FBS_schools.db
 
 Air Force is not a Power 5 school, they're in the Mountain West
 Akron is not a Power 5 school, they're in the MAC
 Alabama is a Power 5 school in the SEC
 <etc...>
+
+Power 5 college football teams playing non-Power 5 teams on the road in 2015:
 
 Week 1:
 Duke at Tulane
