@@ -7,7 +7,7 @@ But occasionally a Power 5 school plays a small school on the road [for various 
 
 Requirements: 
 
-+ Python 2.7 or 3+
++ Python 2.7 or 3.x
 + SQLAlchemy 0.9.4+
 + Beautiful Soup 4.3+
 
