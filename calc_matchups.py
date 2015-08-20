@@ -25,7 +25,7 @@ def calc_matchups(db_location):
     print(" ")
     print("----------")
     print(" ")
-    print("Power 5 college football teams playing non-Power 5 teams on the road in 2015")
+    print("Power 5 college football teams playing non-Power 5 teams on the road in 2015:")
     
     for week in range(14):
         
@@ -68,6 +68,14 @@ def calc_matchups(db_location):
                     if (b[-3:] == 'St.'):
                         b = b[:-3]
                         b = b + "State"                
+
+                    # Directional Michigans need to be expanded
+                    if (a[:2] == 'E.'):
+                        a = "".join(("Eastern",a[2:]))
+                    if (a[:2] == 'C.'):
+                        a = "".join(("Central",a[2:]))
+                    if (a[:2] == 'W.'):
+                        a = "".join(("Western",a[2:]))
                     
                     home_check = session.query(School).filter(School.name == a).first()
                     away_check = session.query(School).filter(School.name == b).first()
