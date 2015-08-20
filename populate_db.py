@@ -51,6 +51,12 @@ def populate_db(db_location):
             ex_loc = schoolNameText.find('!')
             if ex_loc > 0:
                 schoolNameText = schoolNameText[ex_loc+1:]
+                
+            # For argument's sake, let's put Notre Dame in the ACC. 
+            #Otherwise, they mess everything up (as usual)
+            if (schoolNameText == 'Notre Dame'):
+                schoolConference = "ACC"
+
             # check if they're a power 5 conference
             if schoolConference == 'ACC' or \
                schoolConference == 'Big Ten' or \
