@@ -21,7 +21,7 @@ python print_results.py
 
 The script first creates a blank MySQL database. Next, that database is populated with all FBS schools and their conference.  We scrape the [Wikipedia table](http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs) of FBS schools.
 
-Finally, we use that database with an online college football schedule to determine which Power 5 teams are playing road games vs. a non-Power 5 opponent each week.  I found the weekly schedule on the [CBS Sports website](http://www.cbssports.com/collegefootball/schedules/FBS/week1) was the easiest to parse.
+Finally, we use that database with an online college football schedule to determine which Power 5 teams are playing road games vs. a non-Power 5 opponent each week.  I used the schedule on the [CBS Sports website](http://www.cbssports.com/collegefootball/schedules/FBS/week1).
 
 Output for the 2015 season looks like this:
 
@@ -36,26 +36,26 @@ Alabama is a Power 5 school in the SEC
 Power 5 college football teams playing non-Power 5 teams on the road in 2015:
 
 Week 1:
+Oklahoma State at Central Michigan
 Duke at Tulane
 Baylor at SMU
+Michigan State at Western Michigan
 Washington at Boise State
-Mississippi State at Southern Miss
 Penn State at Temple
-Texas at Notre Dame
+Mississippi State at Southern Miss
 Purdue at Marshall
  
 Week 2:
+Minnesota at Colorado State
 Pittsburgh at Akron
 Missouri at Arkansas State
-Minnesota at Colorado State
 Arizona at Nevada
 UCLA at UNLV
  
 Week 3:
-Iowa State at Toledo
-NC State at Old Dominion
-Georgia Tech at Notre Dame
 Colorado at Colorado State
+NC State at Old Dominion
+Iowa State at Toledo
 Utah at Fresno State
  
 Week 4:
@@ -69,23 +69,24 @@ Syracuse at South Florida
  
 Week 7:
 Ole Miss at Memphis
-USC at Notre Dame
  
 Week 8:
  
 Week 9:
 Vanderbilt at Houston
+Notre Dame at Temple
  
 Week 10:
  
 Week 11:
-Wake Forest at Notre Dame
  
 Week 12:
  
 Week 13:
  
 Week 14:
+
+
 
 ```
 
