@@ -39,23 +39,21 @@ Week 1:
 Duke at Tulane
 Baylor at SMU
 Washington at Boise State
-Mississippi State at Southern Miss
 Penn State at Temple
-Texas at Notre Dame
+Mississippi State at Southern Miss
 Purdue at Marshall
  
 Week 2:
+Minnesota at Colorado State
 Pittsburgh at Akron
 Missouri at Arkansas State
-Minnesota at Colorado State
 Arizona at Nevada
 UCLA at UNLV
  
 Week 3:
-Iowa State at Toledo
-NC State at Old Dominion
-Georgia Tech at Notre Dame
 Colorado at Colorado State
+NC State at Old Dominion
+Iowa State at Toledo
 Utah at Fresno State
  
 Week 4:
@@ -69,23 +67,23 @@ Syracuse at South Florida
  
 Week 7:
 Ole Miss at Memphis
-USC at Notre Dame
  
 Week 8:
  
 Week 9:
 Vanderbilt at Houston
+Notre Dame at Temple
  
 Week 10:
  
 Week 11:
-Wake Forest at Notre Dame
  
 Week 12:
  
 Week 13:
  
 Week 14:
+
 
 ```
 
