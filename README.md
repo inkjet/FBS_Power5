@@ -1,15 +1,15 @@
 #Python + College Football ![xx](http://i.imgur.com/YLw9efKt.png)
 ####Determing when large schools teams play small schools on the road
 
-In college football scheduling, the Power 5 conference schools (ACC, Big Ten, Big 12, Pac-12, or SEC) almost always host schools from the smaller conferences (C-USA, MAC, etc).  The smaller school walks away with a paycheck of up to $1 million and the big school gets a win (usually).  
+In college football scheduling, the Power 5 conference schools (ACC, Big Ten, Big 12, Pac-12, or SEC) almost always host schools from the smaller conferences (Sun Belt, MAC, etc).  The big school (usually) get a win and the smaller school walks away with a paycheck of up to $1 million.
 
-But occasionally a Power 5 school plays a small school on the road [for various reasons](http://espn.go.com/blog/acc/post/_/id/74265/acc-hits-the-road-vs-group-of-5), which is pretty cool. I wanted to know if and when these games happen, so I made a Python script to find out.
+But occasionally a Power 5 school plays a small school on the road [for various reasons](http://espn.go.com/blog/acc/post/_/id/74265/acc-hits-the-road-vs-group-of-5). I wanted to find out when these games happen throughout the year, so I made a Python script to find out.
 
 Requirements: 
 
 + Python 2.7 or 3.x
-+ SQLAlchemy 0.9.4+
-+ Beautiful Soup 4.3+
++ [SQLAlchemy](http://www.sqlalchemy.org/) 0.9.4+
++ [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/) 4.3+
 
 Note: both SQLAlchemy (for database creation) and Beautiful Soup (for web scraping) can be installed by `pip install sqlalchemy beautifulsoup4` or are available as pre-installed modules in [Anaconda](https://store.continuum.io/cshop/anaconda/).  
 
@@ -19,7 +19,7 @@ To run:
 python print_results.py
 ```
 
-The script first creates a blank MySQL database. Next, that database is populated with all FBS schools and their conference.  We scrape the [Wikipedia table](http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs) of FBS schools.
+The script first creates a blank MySQL database. Next, that database is populated with all FBS schools and their conference.  We use the [Wikipedia table](http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs) of FBS schools.
 
 Finally, we use that database with an online college football schedule to determine which Power 5 teams are playing road games vs. a non-Power 5 opponent each week.  I used the schedule on the [CBS Sports website](http://www.cbssports.com/collegefootball/schedules/FBS/week1).
 
