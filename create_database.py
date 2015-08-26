@@ -2,6 +2,10 @@
 """
 Script to create blank database of "Big 5" and "Other FBS" schools
 
+Project page: https://github.com/inkjet/FBS_Power5
+
+Author: Scott Rodkey, rodkeyscott@gmail.com
+
 """
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
