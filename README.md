@@ -3,7 +3,7 @@
 
 In college football scheduling, the Power 5 conference schools (ACC, Big Ten, Big 12, Pac-12, or SEC) almost always host schools from the smaller conferences (Sun Belt, MAC, etc).  The big school (usually) get a win and the smaller school walks away with a paycheck of up to $1 million.
 
-But Power 5 schools do play a small school on the road a handful of times a year. So I wrote a Python script to track them all.
+But some Power 5 schools play a small-conference school on the road a handful of times a year. So I wrote a Python script to find them all.
 
 Requirements: 
 
