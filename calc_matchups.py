@@ -75,6 +75,12 @@ def calc_matchups(db_location):
                     # Change Miami "Fla." to "FL"
                     if b[-6:] == '(Fla.)':
                         b = 'Miami (FL)'
+                        
+                    # Change MTSU and UTSA names to match DB
+                    if a == 'M. Tenn. State':
+                        a = 'Middle Tennessee'
+                    if a == 'Texas-San Antonio':
+                        a = 'UTSA'
 
                     home_check = session.query(School).filter(School.name == a).first()
                     away_check = session.query(School).filter(School.name == b).first()
