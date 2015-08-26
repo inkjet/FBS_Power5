@@ -21,7 +21,7 @@ python print_results.py
 
 The script first creates a blank MySQL database. Next, that database is populated with all FBS schools and their conference.  We use the [Wikipedia table](http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs) of FBS schools.
 
-Finally, we use that database with an online college football schedule to determine which Power 5 teams are playing road games vs. a non-Power 5 opponent each week.  I used the schedule on the [CBS Sports website](http://www.cbssports.com/collegefootball/schedules/FBS/week1).
+Finally, we compare our database with an online college football schedule to determine which Power 5 teams are playing road games vs. a non-Power 5 opponent each week.  I used the schedule on the [CBS Sports website](http://www.cbssports.com/collegefootball/schedules/FBS/week1).
 
 Output for the 2015 season looks like this:
 
