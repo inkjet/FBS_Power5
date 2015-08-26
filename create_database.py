@@ -11,12 +11,12 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 import os
- 
+
 Base = declarative_base()
 
 db_folder = os.getcwd() + '/FBS_schools.db'
 db_location = 'sqlite:///' + db_folder
- 
+
 class School(Base):
     __tablename__ = 'school'
     id = Column(Integer, primary_key=True)

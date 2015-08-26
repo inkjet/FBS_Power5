@@ -14,8 +14,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from bs4 import BeautifulSoup
- 
+
 from create_database import School
+from scrape_websites import get_page
 
 def populate_db(db_location):
 
@@ -23,26 +24,19 @@ def populate_db(db_location):
     # Bind the engine to the metadata of the Base class so that the
     # declaratives can be accessed through a DBSession instance
     School.metadata.bind = engine
-     
+
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
-     
-     # now scrape the school names from Wikipedia
-    url="http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs"
 
-    try:
-        # Python 3.x method	
-        from urllib.request import urlopen
-        page=urlopen(url)
-    except:
-        # Python 2.x method
-        import urllib2
-        page=urllib2.urlopen(url) 
+     # now scrape the school names from Wikipedia
+    url = "http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs"
+
+    page = get_page(url)
 
     soup = BeautifulSoup(page.read(), "html.parser")
-    
-    table = soup.find("table", { "class" : "wikitable sortable" })
-    
+
+    table = soup.find("table", {"class" : "wikitable sortable"})
+
     for row in table.findAll("tr"):
         cells = row.findAll("td")
         #For each "tr", assign each "td" to a variable.
@@ -55,18 +49,14 @@ def populate_db(db_location):
             ex_loc = schoolNameText.find('!')
             if ex_loc > 0:
                 schoolNameText = schoolNameText[ex_loc+1:]
-                
-            # For argument's sake, let's put Notre Dame in the ACC. 
+
+            # For argument's sake, let's put Notre Dame in the ACC.
             #Otherwise, they mess everything up (as usual)
             if (schoolNameText == 'Notre Dame'):
                 schoolConference = "ACC"
 
             # check if they're a power 5 conference
-            if schoolConference == 'ACC' or \
-               schoolConference == 'Big Ten' or \
-               schoolConference == 'Big 12' or \
-               schoolConference == 'Pac-12' or \
-               schoolConference == 'SEC':           
+            if schoolConference in {'ACC', 'Big Ten', 'Big 12', 'Pac-12', 'SEC'}:
                 new_school = School(isPowerFive=1, name=schoolNameText)
                 status = ''.join([schoolNameText, " is a Power 5 school in the ", schoolConference])
                 print(status)
@@ -74,7 +64,7 @@ def populate_db(db_location):
                 new_school = School(isPowerFive=0, name=schoolNameText)
                 status = ''.join([schoolNameText, " is not a Power 5 school, they're in the ", schoolConference])
                 print(status)
-    
+
             session.add(new_school)
-    
+
     session.commit()
