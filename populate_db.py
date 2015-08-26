@@ -62,11 +62,7 @@ def populate_db(db_location):
                 schoolConference = "ACC"
 
             # check if they're a power 5 conference
-            if schoolConference == 'ACC' or \
-               schoolConference == 'Big Ten' or \
-               schoolConference == 'Big 12' or \
-               schoolConference == 'Pac-12' or \
-               schoolConference == 'SEC':           
+            if schoolConference in {'ACC', 'Big Ten', 'Big 12', 'Pac-12', 'SEC'}:
                 new_school = School(isPowerFive=1, name=schoolNameText)
                 status = ''.join([schoolNameText, " is a Power 5 school in the ", schoolConference])
                 print(status)
