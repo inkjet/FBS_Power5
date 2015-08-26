@@ -59,26 +59,26 @@ def calc_matchups(db_location):
                     b = ''.join(away_team)
 
                     # CBS lists state teams as "St.", while Wikipedia does it as "State"  Need to replace
-                    if (a[-3:] == 'St.'):
+                    if a[-3:] == 'St.':
                         a = a[:-3] + "State"
-                    if (b[-3:] == 'St.'):
+                    if b[-3:] == 'St.':
                         b = b[:-3] + "State"
 
                     # Directional Michigans need to be expanded
-                    if (a[:2] == 'E.'):
+                    if a[:2] == 'E.':
                         a = "".join(("Eastern", a[2:]))
-                    if (a[:2] == 'C.'):
+                    if a[:2] == 'C.':
                         a = "".join(("Central", a[2:]))
-                    if (a[:2] == 'W.'):
+                    if a[:2] == 'W.':
                         a = "".join(("Western", a[2:]))
 
                     # Change Miami "Fla." to "FL"
-                    if (b[-6:] == '(Fla.)'):
+                    if b[-6:] == '(Fla.)':
                         b = 'Miami (FL)'
 
                     home_check = session.query(School).filter(School.name == a).first()
                     away_check = session.query(School).filter(School.name == b).first()
 
                     if home_check and not home_check.isPowerFive and away_check and away_check.isPowerFive:
-                          status = ''.join([b, " at ", a])
-                          print(status)
+                        status = ''.join([b, " at ", a])
+                        print(status)
