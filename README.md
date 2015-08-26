@@ -63,6 +63,7 @@ Virginia Tech at East Carolina
 NC State at South Alabama
  
 Week 5:
+Miami (FL) at Cincinnati
  
 Week 6:
 Syracuse at South Florida
