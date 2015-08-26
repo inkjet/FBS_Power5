@@ -16,6 +16,7 @@ from sqlalchemy.orm import sessionmaker
 from bs4 import BeautifulSoup
  
 from create_database import School
+from scrape_websites import get_page
 
 def populate_db(db_location):
 
@@ -30,14 +31,7 @@ def populate_db(db_location):
      # now scrape the school names from Wikipedia
     url="http://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs"
 
-    try:
-        # Python 3.x method	
-        from urllib.request import urlopen
-        page=urlopen(url)
-    except:
-        # Python 2.x method
-        import urllib2
-        page=urllib2.urlopen(url) 
+    page = get_page(url)
 
     soup = BeautifulSoup(page.read(), "html.parser")
     

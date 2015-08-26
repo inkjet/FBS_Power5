@@ -13,6 +13,7 @@ from sqlalchemy.orm import sessionmaker
 from bs4 import BeautifulSoup
  
 from create_database import School
+from scrape_websites import get_page
 
 def calc_matchups(db_location):
 
@@ -37,14 +38,7 @@ def calc_matchups(db_location):
         
         url = base_url + str(week+1)
         
-        try:
-            # Python 3.x method	
-            from urllib.request import urlopen
-            page=urlopen(url)
-        except:
-            # Python 2.x method
-            import urllib2
-            page=urllib2.urlopen(url)   	    
+        page = get_page(url)
 	
         soup = BeautifulSoup(page.read(), "html.parser")
         
@@ -66,11 +60,9 @@ def calc_matchups(db_location):
                     
                     # CBS lists state teams as "St.", while Wikipedia does it as "State"  Need to replace
                     if (a[-3:] == 'St.'):
-                        a = a[:-3]
-                        a = a + "State"
+                        a = a[:-3] + "State"
                     if (b[-3:] == 'St.'):
-                        b = b[:-3]
-                        b = b + "State"                
+                        b = b[:-3] + "State"
 
                     # Directional Michigans need to be expanded
                     if (a[:2] == 'E.'):
@@ -89,9 +81,7 @@ def calc_matchups(db_location):
                     if home_check is None or \
                        away_check is None:
                            pass
-                    elif (home_check.isPowerFive == 0) and \
-                       (away_check.isPowerFive == 1):
+                    elif home_check.isPowerFive == 0 and \
+                       away_check.isPowerFive == 1:
                            status = ''.join([b, " at ", a])
                            print(status)
-
-                    
