@@ -79,6 +79,10 @@ def calc_matchups(db_location):
                         a = "".join(("Central",a[2:]))
                     if (a[:2] == 'W.'):
                         a = "".join(("Western",a[2:]))
+                        
+                    # Change Miami "Fla." to "FL"                        
+                    if (b[-6:] == '(Fla.)'):
+                        b = 'Miami (FL)'
                     
                     home_check = session.query(School).filter(School.name == a).first()
                     away_check = session.query(School).filter(School.name == b).first()
