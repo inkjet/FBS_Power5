@@ -2,7 +2,7 @@
 """
 Script to determine when a college football program from a Power-5 conference
 (ACC, SEC, Big Ten, Big 12, Pac-12) plays a non-Power 5 team on the road.
-This a semi-rare occurance, 
+This a semi-rare occurance,
 
 Requirements: Python with the SQLAlchemy and Beautiful Soup modules
 
