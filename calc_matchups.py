@@ -78,10 +78,7 @@ def calc_matchups(db_location):
 
                     home_check = session.query(School).filter(School.name == a).first()
                     away_check = session.query(School).filter(School.name == b).first()
-                    if home_check is None or \
-                       away_check is None:
-                          pass
-                    elif home_check.isPowerFive == 0 and \
-                       away_check.isPowerFive == 1:
+
+                    if home_check and not home_check.isPowerFive and away_check and away_check.isPowerFive:
                           status = ''.join([b, " at ", a])
                           print(status)
