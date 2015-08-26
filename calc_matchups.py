@@ -2,7 +2,10 @@
 """
 Prints out the Power 5 vs. Non-Power 5 road matchups
 
-First run create_database.py, then populate_db.py
+Project page: https://github.com/inkjet/FBS_Power5
+
+Author: Scott Rodkey, rodkeyscott@gmail.com
+
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
