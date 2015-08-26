@@ -1,5 +1,5 @@
 #Python + College Football ![xx](http://i.imgur.com/YLw9efKt.png)
-####Determing when large schools teams play small schools on the road
+####Determing when large schools play small schools on the road
 
 In college football scheduling, the Power 5 conference schools (ACC, Big Ten, Big 12, Pac-12, or SEC) almost always host schools from the smaller conferences (Sun Belt, MAC, etc).  The big school (usually) get a win and the smaller school walks away with a paycheck of up to $1 million.
 
