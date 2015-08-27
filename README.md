@@ -46,6 +46,7 @@ Mississippi State at Southern Miss
 Purdue at Marshall
  
 Week 2:
+Miami (FL) at Florida Atlantic
 Kansas State at UTSA
 Minnesota at Colorado State
 Pittsburgh at Akron
@@ -69,6 +70,7 @@ Vanderbilt at Middle Tennessee
  
 Week 6:
 Syracuse at South Florida
+Duke at Army
  
 Week 7:
 Ole Miss at Memphis
