@@ -76,7 +76,7 @@ def calc_matchups(db_location):
                     if b[-6:] == '(Fla.)':
                         b = 'Miami (FL)'
                         
-                    # Various cleanups to reconsile between Wikipedia and CBS Sports
+                    # Various cleanups to reconcile between Wikipedia and CBS Sports
                     if a == 'M. Tenn. State':
                         a = 'Middle Tennessee'
                     if a == 'Texas-San Antonio':
